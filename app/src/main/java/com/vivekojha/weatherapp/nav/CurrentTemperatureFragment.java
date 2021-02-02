@@ -54,6 +54,7 @@ public class CurrentTemperatureFragment extends Fragment {
     LocationListener mLocationListener;
     ProgressBar progressBar;
 
+    TextView Wind, FeelsLike, Rain, Min_Temp;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,6 +66,11 @@ public class CurrentTemperatureFragment extends Fragment {
         NameOfCity = v.findViewById(R.id.cityName);
         mWeatherIcon = v.findViewById(R.id.weatherIcon);
         progressBar = v.findViewById(R.id.progressBar);
+
+        FeelsLike = v.findViewById(R.id.textView18);
+        Rain = v.findViewById(R.id.textView19);
+        Wind = v.findViewById(R.id.textView21);
+        Min_Temp = v.findViewById(R.id.textView22);
 
 
         return v;
@@ -174,6 +180,14 @@ public class CurrentTemperatureFragment extends Fragment {
         WeatherState.setText(weatherData.getmWeatherType());
         int resourceID = getResources().getIdentifier(weatherData.getmIcon(), "drawable", getActivity().getPackageName());
         mWeatherIcon.setImageResource(resourceID);
+
+        Wind.setText(weatherData.getWind());
+        FeelsLike.setText(weatherData.getFeelsLike());
+        Rain.setText(weatherData.getRain());
+        Min_Temp.setText(weatherData.getMin_temp());
+
+
+
     }
 
     @Override

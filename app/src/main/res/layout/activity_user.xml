@@ -63,7 +63,7 @@
                     android:inputType="textPersonName"
                     android:singleLine="true"
                     android:layout_width="match_parent"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionGo"
                     android:layout_height="wrap_content"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089"
